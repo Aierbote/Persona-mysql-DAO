@@ -54,8 +54,11 @@ public class View {
 
   public String addStudent() {
     System.out.println(
-        " EXAMPLE: **Smith John 25 123456 13**" + "\n" +
+        " EXAMPLE: **100 Smith John 25  asd@asd.com +0123456789 123456 13**" + "\n" +
+        " NOTE: 100 is ID o PK of DB" + "\n" +
         " NOTE: 25 is age" + "\n" +
+        " NOTE:  asd@asd.com is an email" + "\n" +
+        " NOTE:  +0123456789 is a phone numberx" + "\n" +
         " NOTE: 123456 is a studentID" + "\n" +
         " NOTE: 13 is a 13th grade" + "\n" +
         " \n" +
@@ -67,7 +70,9 @@ public class View {
   }
   public String addTeacher() {
     System.out.println(
-        " EXAMPLE: **Smith John 25 Maths 1_300**" + "\n" +
+        // TODO: 29/10/23 : dopo aver definito un Teacher Builder simile a Student Builder, cambia l'esempio qui nel view 
+        " EXAMPLE: **100 Smith John 25 Maths 1_300**" + "\n" +
+        " NOTE: 100 is ID o PK of DB" + "\n" +
         " NOTE: 25 is age" + "\n" +
         " NOTE: Maths is classroom" + "\n" +
         " NOTE: 1_300 is salary in euros " + "\n" +
