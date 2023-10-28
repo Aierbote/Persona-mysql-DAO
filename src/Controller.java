@@ -115,10 +115,10 @@ public class Controller {
 
     do {
       // mostra menu all'Utente
-      choice = this.view.showMenu();
+      choice = this.view.showMenu().toLowerCase();
 
       // TODO: 23/10/23 : DEBUG : strano, solo qui il `toLowercase` funziona, sia nei return dopo `nextLine` che nelle inizializzazioni degli `infos` invece no, non passa come equals nello switchcase e mi salta al `default` & `showError`
-      switch (choice.toLowerCase()) {
+      switch (choice) {
         case "add student":
           // addStudent del Controller prende l'output di addStudent del View
           this.addStudent(this.view.addStudent());
@@ -130,6 +130,9 @@ public class Controller {
 //          System.out.println(this.getPersons());
 
             this.view.listPeople(this.getPersons());
+          break;
+        case "exit":
+          System.out.println("Interrupting by user choice. Bye bye!");
           break;
 //        case "exit":
 //          choice = "exit";
