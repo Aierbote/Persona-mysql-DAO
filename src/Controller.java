@@ -61,19 +61,38 @@ public class Controller {
     try {
       for (int i = 0; i < persons.length; i++) {
         if (this.persons[i] == null) {
-          this.persons[i] = new Student(
-              Integer.parseInt(infos[0]), // ID, pk del db
+////          VERSION 1
+//          this.persons[i] = new Student(
+//              Integer.parseInt(infos[0]), // ID, pk del db
+//
+//              infos[1], // nome
+//              infos[2], // cognome
+//              Integer.parseInt(infos[3]), // etò
+//              infos[4], // email
+//              infos[5], // num_telefono
+//
+//
+//              Integer.parseInt(infos[6]), // studentID
+//              Integer.parseInt(infos[7])  // gradeLevel
+//          );
+//          break;
 
-              infos[1], // nome
-              infos[2], // cognome
-              Integer.parseInt(infos[3]), // etò
-              infos[4], // email
-              infos[5], // num_telefono
+//          VERSION 2
+          Student newStud = (
+                (StudentBuilder) new StudentBuilder()
+                .newBuilder(Integer.parseInt(infos[0]))
+                .surname(infos[1])
+                .name(infos[2])
+                .age(Integer.parseInt(infos[3]))
+                .email(infos[4])
+                .phoneNumber(infos[5])
+              )
+              .studentID(Integer.parseInt(infos[6]))
+              .gradeLevel(Integer.parseInt(infos[7]))
+              .build();
 
+          this.persons[i] = newStud;
 
-              Integer.parseInt(infos[6]), // studentID
-              Integer.parseInt(infos[7])  // gradeLevel
-          );
           break;
         }
       }
