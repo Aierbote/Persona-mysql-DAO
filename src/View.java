@@ -1,3 +1,5 @@
+import model.Person;
+
 import java.util.Scanner;
 
 /**
@@ -54,7 +56,7 @@ public class View {
 
   public String addStudent() {
     System.out.println(
-        " EXAMPLE: **100 Smith John 25  asd@asd.com +0123456789 123456 13**" + "\n" +
+        " EXAMPLE: **100 Smith John 25 asd@asd.com +0123456789 123456 13**" + "\n" +
         " NOTE: 100 is ID o PK of DB" + "\n" +
         " NOTE: 25 is age" + "\n" +
         " NOTE:  asd@asd.com is an email" + "\n" +
