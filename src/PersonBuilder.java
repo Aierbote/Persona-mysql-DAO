@@ -1,24 +1,29 @@
 /**
  * @author Alberto Cangialosi
  *
+ * Per costruiere un'instanza di Persona con il Design Pattern **Builder**
  * <br>
  * SOURCE:
  * <a href="https://italiancoders.it/builder-pattern-un-ottima-alternativa-al-costruttore/">...</a>
  */
-public final class PersonBuilder {
-  private  Integer ID;
-  private  String nome;
-  private  String cognome;
-  private  Integer età;
-  private  String email;
-  private  String num_telefono;
+public class PersonBuilder {
+  protected  Integer ID;
+  protected  String nome;
+  protected  String cognome;
+  protected  Integer età;
+  protected  String email;
+  protected  String num_telefono;
 
-  private PersonBuilder(Integer ID) {
+//  protected PersonBuilder(Integer ID) {
+//    this.ID = ID;
+//  }
+
+//  ""Setters""
+
+  public PersonBuilder newBuilder(Integer ID) {
+//    return new PersonBuilder(ID);
     this.ID = ID;
-  }
-
-  public  PersonBuilder newBuilder(Integer ID) {
-    return new PersonBuilder(ID);
+    return this;
   }
 
   public PersonBuilder name(String nome) {
@@ -72,7 +77,7 @@ public final class PersonBuilder {
 
   // TEST
 
-  /**
+  /*
    * NOTE: per usare qyesto DEBUG ci si deve assicurare di aver tutti statici per essere referiti da un punto di vista statico
    * @param args
    */
@@ -85,7 +90,7 @@ public final class PersonBuilder {
 //        .email("tall.dwarf@gmail.com")
 //        .phoneNumber("+0923551108");
 //
-//    Person persConBuilder = PersonBuilder.build();
+//    Person persConBuilder = personBuilder.build();
 //
 //    System.out.println("built persConBuilder:\n\t" + persConBuilder);
 //  }

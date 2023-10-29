@@ -21,6 +21,20 @@ public class Student extends Person {
     this.gradeLevel = gradeLevel;
   }
 
+  // // Unica soluzione per  il "super.build()" dentro StudentBuilder...!
+  public Student(Person person, Integer studentID, Integer gradeLevel) {
+    super(
+        person.getID(),
+        person.getNome(),
+        person.getCognome(),
+        person.getEtà(),
+        person.getEmail(),
+        person.getNum_telefono()
+    );
+    this.studentID = studentID;
+    this.gradeLevel = gradeLevel;
+  }
+
   public Integer getStudentID() {
     return this.studentID;
   }
