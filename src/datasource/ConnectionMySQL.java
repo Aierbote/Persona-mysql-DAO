@@ -53,5 +53,8 @@ public class ConnectionMySQL {
     }
   }
 
+
+  // TODO: 29/10/23  : creare un insertRecord e un retrieveRecord per interaggire col DB
+
   /* throws-catch SQLException */
 }
