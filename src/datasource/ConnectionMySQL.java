@@ -17,6 +17,14 @@ import java.sql.*;
  *      </a>
  */
 public class ConnectionMySQL {
+
+
+  private Connection connection;
+
+  public Connection getConnection() {
+    return connection;
+  }
+  
   public static void main(String[] args) {
     // URL al server di prova fatto con XAMPP
     final String URL = "jdbc:mysql://localhost:3306/Persona_for_BUILDER_PATTERN";
